@@ -9,5 +9,5 @@ Insert template
 After that you can follow these steps
 1. Make sure you have [yarn](https://www.npmjs.com/package/yarn) installed
 2. Install all packages using the command `yarn` inside the workspace
-3. Run either `yarn dev` for a hot-reload or `yarn start`. In production purposes it should be ran using the compiled output provided by `tsc`
+3. Run either `yarn dev` for a hot-reload or `yarn start`. In production purposes it should be ran using the compiled output provided by `tsc`.
 
