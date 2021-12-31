@@ -6,7 +6,7 @@ import path from 'node:path';
 import RouteHandler from './RouteHandler';
 
 export const app = express();
-export const PORT = 6167 || process.env.PORT;
+export const PORT = 2096 || process.env.PORT;
 export const DOCS = 'https://github.com/MCDocker/MCDocker';
 
 export const knex = Knex({
