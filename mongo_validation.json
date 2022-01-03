@@ -1,0 +1,107 @@
+{
+    "containers": {
+        "validation": {
+            "$jsonSchema": {
+                "bsonType": "object",
+                "required": [
+                    "name",
+                    "id",
+                    "memory",
+                    "mods",
+                    "client"
+                ],
+                "properties": {
+                    "name": {
+                        "bsonType": "string"
+                    },
+                    "id": {
+                        "bsonType": "string"
+                    },
+                    "memory": {
+                        "bsonType": "string"
+                    },
+                    "mods": {
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "object",
+                            "required": [
+                                "name",
+                                "id",
+                                "version",
+                                "type"
+                            ],
+                            "properties": {
+                                "name": {
+                                    "bsonType": "string"
+                                },
+                                "id": {
+                                    "bsonType": "string"
+                                },
+                                "version": {
+                                    "bsonType": "string"
+                                },
+                                "type": {
+                                    "bsonType": "string"
+                                }
+                            }
+                        }
+                    },
+                    "client": {
+                        "bsonType": "object",
+                        "required": [
+                            "dataUrl",
+                            "name",
+                            "javaVersion",
+                            "mainClass",
+                            "startupArguments",
+                            "type"
+                        ],
+                        "properties": {
+                            "dataUrl": {
+                                "bsonType": "string"
+                            },
+                            "name": {
+                                "bsonType": "string"
+                            },
+                            "javaVersion": {
+                                "bsonType": "int"
+                            },
+                            "mainClass": {
+                                "bsonType": "string"
+                            },
+                            "startupArguments": {
+                                "bsonType": "string"
+                            },
+                            "type": {
+                                "bsonType": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "users": {
+        "validation": {
+            "$jsonSchema": {
+              "bsonType": "object",
+              "required": [
+                "name",
+                "created",
+                "minecraftId"
+              ],
+              "properties": {
+                "name": {
+                  "bsonType": "string"
+                },
+                "created": {
+                  "bsonType": "string"
+                },
+                "minecraftId": {
+                  "bsonType": "string"
+                }
+              }
+            }
+          }
+    }
+}
