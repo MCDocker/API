@@ -1,5 +1,6 @@
+import { readFileSync } from 'fs';
 import * as mongo from 'mongodb';
-import mongoValidator from '../../mongo_validation.json';
+import { join } from 'path';
 
 export interface MongoCollections {
     containers?: mongo.Collection,
@@ -10,6 +11,8 @@ class Mongo {
     collections: MongoCollections = {};
 
     public connect() {
+        const mongoValidator = JSON.parse(readFileSync(join(__dirname, '..', '..', 'mongo_validation.json'), { encoding: 'utf8' }));
+
         return new Promise((resolve, reject) => {
             const client = new mongo.MongoClient(String(process.env.DB_CONN));
 
