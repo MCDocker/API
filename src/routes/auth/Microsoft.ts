@@ -38,6 +38,8 @@ class Microsoft extends Route {
 
         if (!(await Account.exists(profile.id)).valueOf()) {
             await Account.create(profile.name, profile.id);
+        } else {
+            await Account.update(profile.id, { name: profile.name });
         }
 
         res.send(profile);

@@ -1,5 +1,6 @@
 import { ObjectId } from 'mongodb';
 import ModsModel from './ModsModel';
+import User from './UserModel';
 
 interface ClientModel {
     dataUrl: string,
@@ -18,5 +19,6 @@ export default class ContainerModel {
         public mods: ModsModel[],
         public client: ClientModel,
         public objectID: ObjectId,
+        public minecraftId: string,
     ) {}
 }
